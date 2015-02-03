@@ -34,4 +34,18 @@ public class Billfold extends Card
         }
         return str;
     }
+    
+    public int getExpiredCardCount()
+    {
+        int expCount = 0;
+        if(slot1.isExpired())
+        {
+            expCount++;
+        }
+        if(slot2.isExpired())
+        {
+            expCount++;
+        }
+        return expCount;
+    }
 }

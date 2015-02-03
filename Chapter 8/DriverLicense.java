@@ -30,6 +30,5 @@ public class DriverLicense extends Card
         {
             return false;
         }
-        
     }
 }
