@@ -16,5 +16,15 @@ public class IDCard extends Card
         str += "\nID Number: " + this.id;
         return str;
     }
-
+    
+    public boolean equals(Object otherObject)
+    {
+        if(this.getClass() == otherObject.getClass())
+        {
+            IDCard other = (IDCard) otherObject;
+            return this.getName().equals(other.getName())
+                   && id.equals(other.id);
+        }
+        return false;
+    }
 }

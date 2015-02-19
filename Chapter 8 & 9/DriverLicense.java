@@ -31,4 +31,15 @@ public class DriverLicense extends Card
             return false;
         }
     }
+    
+    public boolean equals(Object otherObject)
+    {
+        if(this.getClass() == otherObject.getClass())
+        {
+            DriverLicense other = (DriverLicense) otherObject;
+            return this.getName().equals(other.getName())
+                   && expireYear.equals(other.expireYear);
+        }
+        return false;
+    }
 }

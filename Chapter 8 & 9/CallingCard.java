@@ -18,5 +18,16 @@ public class CallingCard extends Card
         str += "\nCard Number: " + this.cardNum + "\nPIN: " + this.pin;
         return str;
     }
-
+    
+    public boolean equals(Object otherObject)
+    {
+        if(this.getClass() == otherObject.getClass())
+        {
+            CallingCard other = (CallingCard) otherObject;
+            return this.getName().equals(other.getName())
+                   && cardNum.equals(other.cardNum)
+                   && pin.equals(other.pin);
+        }
+        return false;
+    }
 }
